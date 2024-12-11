@@ -1,4 +1,7 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.Linq;
+using System;
 
 public class MazeController : MonoBehaviour
 {
@@ -13,7 +16,7 @@ public class MazeController : MonoBehaviour
     private GameObject player;
     public GameObject EntrancePrefab;
     public GameObject ExitPrefab;
-    public GameObject PowerupPrefab;
+    public GameObject[] PowerupPrefab;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +46,9 @@ public class MazeController : MonoBehaviour
                 else if (Map[y, x] == Cell.Checkpoint)
                 {
                     Instantiate(FloorPrefab, positionFloor, Quaternion.identity, transform);
-                    Instantiate(PowerupPrefab, positionPowerup, Quaternion.identity, transform);
+                    var rand = new System.Random();
+                    var powerup = PowerupPrefab[rand.Next(0, PowerupPrefab.Count())];
+                    Instantiate(powerup, positionPowerup, Quaternion.identity, transform);
                 }
                 else if (Map[y, x] == Cell.Entrance) 
                 {

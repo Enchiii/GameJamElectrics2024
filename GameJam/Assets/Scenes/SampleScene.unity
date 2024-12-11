@@ -158,7 +158,9 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 6038272077371120257, guid: 4c3febf754e45cf44b226b4d7ab45a01, type: 3}
   EntrancePrefab: {fileID: 4245777933500673234, guid: a7d4fd60302e2ae4682ef76a77b4e92f, type: 3}
   ExitPrefab: {fileID: 4245777933500673234, guid: be8d471104e122d4aa3646e54e910f83, type: 3}
-  CheckpointPrefab: {fileID: 231303828265425818, guid: 25943e1e4c9f95544bbc9d1c397c2876, type: 3}
+  PowerupPrefab:
+  - {fileID: 5752113578825848140, guid: 53d342b09d4a426428a8f6bbf10777f5, type: 3}
+  - {fileID: 5752113578825848140, guid: c50d00c17a81fd041a13f985b5089316, type: 3}
 --- !u!4 &406470462
 Transform:
   m_ObjectHideFlags: 0
