@@ -38,7 +38,7 @@ public class PickupSystem : MonoBehaviour
         heldItem.transform.SetParent(handPosition);
         heldItem.transform.localPosition = Vector3.zero;
         heldItem.transform.localRotation = Quaternion.identity;
-        heldItem.GetComponent<Collider>().enabled = false;
+        // heldItem.GetComponent<Collider>().enabled = false;
         Debug.Log("You picked up: " + heldItem.name);
     }
 
@@ -56,8 +56,8 @@ public class PickupSystem : MonoBehaviour
         if (heldItem != null) {
             Debug.Log("You drop: " + heldItem.name);
             heldItem.GetComponent<Collider>().enabled = true;
+            heldItem.transform.position = transform.position;
             heldItem.transform.SetParent(null);
-            // heldItem.transform.position = // tutaj
             heldItem = null;
         } else {
             Debug.Log("You dont have any items");
