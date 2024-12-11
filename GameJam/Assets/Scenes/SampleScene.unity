@@ -119,7 +119,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &57405560
+--- !u!1 &406470460
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,23 +127,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 57405561}
-  m_Layer: 3
-  m_Name: Floor
+  - component: {fileID: 406470462}
+  - component: {fileID: 406470461}
+  m_Layer: 0
+  m_Name: GameMeneger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &57405561
+--- !u!114 &406470461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406470460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7de998b992ee14247b49a01ed33bdc61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 50
+  height: 50
+  checkpointsCount: 30
+  minCheckpointRange: 10
+  maxCheckpointRange: 25
+  WallPrefab: {fileID: 6463702293857348953, guid: 8a1294999a41e014a851e37fcf768010, type: 3}
+  FloorPrefab: {fileID: 231303828265425818, guid: 79da03856462d0d4ebbf08757ef23641, type: 3}
+  PlayerPrefab: {fileID: 6038272077371120257, guid: 4c3febf754e45cf44b226b4d7ab45a01, type: 3}
+  EntrancePrefab: {fileID: 4245777933500673234, guid: a7d4fd60302e2ae4682ef76a77b4e92f, type: 3}
+  ExitPrefab: {fileID: 4245777933500673234, guid: be8d471104e122d4aa3646e54e910f83, type: 3}
+  CheckpointPrefab: {fileID: 231303828265425818, guid: 25943e1e4c9f95544bbc9d1c397c2876, type: 3}
+--- !u!4 &406470462
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 57405560}
+  m_GameObject: {fileID: 406470460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+<<<<<<< HEAD
   m_LocalPosition: {x: -2.0716305, y: 1.535151, z: 1.3288813}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -611,6 +636,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handPosition: {fileID: 1709803794}
+=======
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+>>>>>>> dd31231be7a6468edaf1a62e8669ceae2da722a9
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,6 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
@@ -932,6 +966,8 @@ Transform:
   - {fileID: 1129850883}
   m_Father: {fileID: 1888886313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> dd31231be7a6468edaf1a62e8669ceae2da722a9
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -961,11 +997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_IsGlobal: 1
-  priority: 0
-  blendDistance: 0
-  weight: 1
-  sharedProfile: {fileID: 11400000, guid: 10fc4df2da32a41aaa32d77bc913491c, type: 2}
 --- !u!4 &832575519
 Transform:
   m_ObjectHideFlags: 0
@@ -981,6 +1012,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &886929858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1561,14 +1593,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> dd31231be7a6468edaf1a62e8669ceae2da722a9
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
+<<<<<<< HEAD
   - {fileID: 57405561}
   - {fileID: 383424335}
   - {fileID: 718942797}
   - {fileID: 2120135200}
   - {fileID: 68204347}
+=======
+  - {fileID: 406470462}
+>>>>>>> dd31231be7a6468edaf1a62e8669ceae2da722a9

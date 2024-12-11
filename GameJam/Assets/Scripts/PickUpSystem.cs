@@ -17,9 +17,9 @@ public class PickupSystem : MonoBehaviour {
                     PickupItem(highlightedItem);
                     ClearHint();
                 } else {
-                    // DropItem();
-                    // PickupItem(highlightedItem);
-                    // ClearHint();
+                    DropItem();
+                    PickupItem(highlightedItem);
+                    ClearHint();
                 }
             }
         }
@@ -35,7 +35,7 @@ public class PickupSystem : MonoBehaviour {
 
     void HighlightItem() {
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out RaycastHit hit, 2f)) {
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f)) {
             if (hit.collider.CompareTag("Item")) {
                 highlightedItem = hit.collider.gameObject;
                 pickupHintText.text = "Press E to pick up " + highlightedItem.name; //dodac item.desciption
