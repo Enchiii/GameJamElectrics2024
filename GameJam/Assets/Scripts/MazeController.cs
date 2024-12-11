@@ -33,7 +33,7 @@ public class MazeController : MonoBehaviour
             {
                 Vector3 positionWall = new Vector3(x * WallPrefab.transform.localScale.x * 2, 0, y * WallPrefab.transform.localScale.z * 2);
                 Vector3 positionFloor = new Vector3(x * FloorPrefab.transform.localScale.x * 2, -1, y * FloorPrefab.transform.localScale.z * 2);
-                Vector3 positionPowerup = new Vector3(x * FloorPrefab.transform.localScale.x * 2, 1, y * FloorPrefab.transform.localScale.z * 2);
+                Vector3 positionPowerup = new Vector3(x * FloorPrefab.transform.localScale.x * 2, 0.5f, y * FloorPrefab.transform.localScale.z * 2);
 
                 if (Map[y, x] == Cell.Wall)
                 {
