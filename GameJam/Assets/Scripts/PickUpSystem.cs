@@ -46,6 +46,15 @@ void HighlightItem() {
     if (Input.touchCount > 0) {
         Touch touch = Input.GetTouch(0);
         Ray ray = Camera.main.ScreenPointToRay(touch.position);
+    void TryPickupItem() {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out RaycastHit hit, 2f)) {
+            if (hit.collider.CompareTag("Item")) {
+                PickupItem(hit.collider.gameObject);
+            }
+        }
+    }
+
         if (Physics.Raycast(ray, out RaycastHit hit, 3f)) {
             if (hit.collider.CompareTag("Item")) {
                 highlightedItem = hit.collider.gameObject;
@@ -73,17 +82,26 @@ void HighlightItem() {
         heldItem.transform.SetParent(handPosition);
         heldItem.transform.localPosition = Vector3.zero;
         heldItem.transform.localRotation = Quaternion.identity;
+
         heldItem.GetComponent<Collider>().enabled = false;
         Debug.Log("Picked up: " + heldItem.name);
+        // heldItem.GetComponent<Collider>().enabled = false;
+        Debug.Log("You picked up: " + heldItem.name);
     }
 
     void UseItem() {
         if (heldItem != null) {
-            Debug.Log("Using: " + heldItem.name);
+
+            Debug.Log("You are using: " + heldItem.name);
             Destroy(heldItem);
             heldItem = null;
         } else {
-            Debug.Log("You are not holding anything to use.");
+            Debug.Log("You dont have any items");
+            Debug.Log("Using: " + heldItem.name);
+            Destroy(heldItem);
+            heldItem = null;
+
+
         }
     }
 
