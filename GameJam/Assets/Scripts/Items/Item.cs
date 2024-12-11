@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Item{
+public abstract class Item{
     public enum ItempType{
         Medicines,
         Potion,
@@ -12,6 +12,5 @@ public class Item{
     public String description;
     public int holdingAnimation;
     public int activeAnimation;
-
-    public void Use(){}
+    public abstract void Use();
 }

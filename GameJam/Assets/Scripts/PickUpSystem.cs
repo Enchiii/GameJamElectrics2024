@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class PickupSystem : MonoBehaviour {
     public Transform handPosition;
-    public TextMeshProUGUI pickupHintText;
+    public Text pickupHintText;
     private GameObject heldItem = null;
     private GameObject highlightedItem = null;
 
